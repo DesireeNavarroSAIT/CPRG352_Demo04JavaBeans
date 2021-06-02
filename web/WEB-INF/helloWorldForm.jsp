@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -22,6 +23,8 @@
             <br>
             <input type="submit" value="Say Hello">
         </form>
-        <p>${message}</p>
+            <c:if test="${invalid}">
+        <p>Invalid Entry. Please enter both first and last name!!!</p>
+            </c:if>
     </body>
 </html>
